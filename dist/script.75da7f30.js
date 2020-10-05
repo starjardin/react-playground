@@ -28293,25 +28293,6 @@ var _react = _interopRequireDefault(require("react"));
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-console.log("Hello world");
-
-function App() {
-  return /*#__PURE__*/_react.default.createElement("h1", null, "You are now a react developper");
-} //called JSX syntax
-
-
-function Allll() {
-  return /*#__PURE__*/_react.default.createElement("p", null, "lorem kldgjklasd here is a new paagraph for you for this term. Happy coding\uD83C\uDF55\uD83C\uDF55\uD83C\uDF55\uD83C\uDF55\uD83C\uDF55\uD83C\uDF55\uD83C\uDF55\uD83C\uDF55\uD83C\uDF55\uD83C\uDF55\uD83C\uDF55 Put it on fire\uD83D\uDD25\uD83D\uDD25\uD83D\uDD25 and then eat it finaly \uD83C\uDF74\uD83C\uDF74\uD83C\uDF74\uD83C\uDF74");
-}
-
-_reactDom.default.render( /*#__PURE__*/_react.default.createElement(App, null), document.getElementById('root'));
-
-_reactDom.default.render( /*#__PURE__*/_react.default.createElement(App, null), document.getElementById('div'));
-
-_reactDom.default.render( /*#__PURE__*/_react.default.createElement(Allll, null), document.getElementById("root2"));
-
-_reactDom.default.render( /*#__PURE__*/_react.default.createElement(Allll, null), document.getElementById("div2"));
 },{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js"}],"../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

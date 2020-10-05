@@ -1,17 +1,35 @@
-console.log("Hello world");
-import React from 'react';
+//Objective: Fill in the boilerplate React code required to render an
+// unordered list (<ul>) to the page. The list should contain 3 list items
+// (<li>) with anything in them you want.
+// HINTS:
+// import the libraries you need first
+// use one of the libraries to render some JSX to the page
+
+import React from "react";
 import ReactDOM from "react-dom";
 
-function App () {
-  return <h1>You are now a react developper</h1>;
-}
-//called JSX syntax
+//   ReactDOM.render(
+//     <ul>
+//       <li>I am the first li</li>
+//       <li>I am the second li</li>
+//       <li>I am the third li</li>
+//     </ul>, document.getElementById('root'));
 
-function Allll () {
-  return <p>lorem kldgjklasd here is a new paagraph for you for this term. Happy coding🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕 Put it on fire🔥🔥🔥 and then eat it finaly 🍴🍴🍴🍴</p>
-}
+// function App () {
+// return  (
+//   <ul>
+//     <li>I am the first li</li>
+//     <li>I am the second li</li>
+//     <li>I am the third li</li>
+//   </ul>
+//  )
+// }
 
-ReactDOM.render(<App/>, document.getElementById('root'));
-ReactDOM.render(<App/>, document.getElementById('div'));
-ReactDOM.render(<Allll/>, document.getElementById("root2"));
-ReactDOM.render(<Allll/>, document.getElementById("div2"));
+// ReactDOM.render(<App/>, document.getElementById("root"));
+
+//************************************************/
+
+//Functional components;
+/*
+UpperCase cameleCase : MyApp
+*/
