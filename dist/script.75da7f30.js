@@ -28285,15 +28285,151 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"script.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"NewComponent.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function NewComponent() {
+  return /*#__PURE__*/_react.default.createElement("p", null, "I am a new paragraph");
+}
+
+;
+var _default = NewComponent;
+exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"StyleComponents.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.listColor = exports.bold = exports.h1Style = exports.divStyle = void 0;
+var divStyle = {
+  color: "blue",
+  backgroundColor: '#cccccc',
+  padding: "2rem"
+};
+exports.divStyle = divStyle;
+var h1Style = {
+  fontWeight: "bold",
+  color: "#111111",
+  padding: '1rem'
+};
+exports.h1Style = h1Style;
+var bold = {
+  color: "red"
+};
+exports.bold = bold;
+var listColor = {
+  color: '#ff00ff'
+};
+exports.listColor = listColor;
+},{}],"OlComponent.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.OlComponent = OlComponent;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _StyleComponents = require("./StyleComponents");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function OlComponent() {
+  return /*#__PURE__*/_react.default.createElement("ol", {
+    style: _StyleComponents.listColor
+  }, /*#__PURE__*/_react.default.createElement("li", null, "Brasil"), /*#__PURE__*/_react.default.createElement("li", null, "Paris"), /*#__PURE__*/_react.default.createElement("li", null, "Los Angeles"));
+}
+},{"react":"node_modules/react/index.js","./StyleComponents":"StyleComponents.js"}],"MyInfo.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _NewComponent = _interopRequireDefault(require("./NewComponent"));
+
+var _OlComponent = require("./OlComponent");
+
+var _StyleComponents = require("./StyleComponents");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function MyInfo() {
+  return /*#__PURE__*/_react.default.createElement("article", {
+    style: _StyleComponents.divStyle
+  }, /*#__PURE__*/_react.default.createElement("h1", {
+    style: _StyleComponents.h1Style
+  }, " Honey\u270B\u270B"), /*#__PURE__*/_react.default.createElement("p", null, "I am a honey called ", /*#__PURE__*/_react.default.createElement("b", {
+    style: _StyleComponents.bold
+  }, "NON-JAR")), /*#__PURE__*/_react.default.createElement(_OlComponent.OlComponent, null), /*#__PURE__*/_react.default.createElement(_NewComponent.default, null));
+}
+
+var _default = MyInfo;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","./NewComponent":"NewComponent.js","./OlComponent":"OlComponent.js","./StyleComponents":"StyleComponents.js"}],"script.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
+var _MyInfo = _interopRequireDefault(require("./MyInfo.js"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js"}],"../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+//Objective: Fill in the boilerplate React code required to render an
+// unordered list (<ul>) to the page. The list should contain 3 list items
+// (<li>) with anything in them you want.
+// HINTS:
+// import the libraries you need first
+// use one of the libraries to render some JSX to the page
+//   ReactDOM.render(
+//     <ul>
+//       <li>I am the first li</li>
+//       <li>I am the second li</li>
+//       <li>I am the third li</li>
+//     </ul>, document.getElementById('root'));
+// function App () {
+// return  (
+//   <ul>
+//     <li>I am the first li</li>
+//     <li>I am the second li</li>
+//     <li>I am the third li</li>
+//   </ul>
+//  )
+// }
+// ReactDOM.render(<App/>, document.getElementById("root"));
+//************************************************/
+//Functional components;
+
+/*
+UpperCase cameleCase : MyApp
+*/
+// Objectives:
+// 1. Set up the basic React code from scratch
+// 2. Create a functional component called MyInfo that returns the following UI:
+// a. An h1 with your name
+// b. A paragraph with a little blurb about yourself
+// c. An ordered or unordered list of the top 3 vacation spots you'd like to visit
+// 3. Render an instance of that functional component to the browser
+// Extra challenge: learn on your own (Google!) how you can add some style to your page.
+// (We will also cover this in an upcoming lesson).
+_reactDom.default.render( /*#__PURE__*/_react.default.createElement(_MyInfo.default, null), document.getElementById('root'));
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./MyInfo.js":"MyInfo.js"}],"../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
