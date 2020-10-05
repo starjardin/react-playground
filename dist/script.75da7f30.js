@@ -28285,7 +28285,7 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"NewComponent.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"components/sub-component/MainContent.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28297,60 +28297,13 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function NewComponent() {
-  return /*#__PURE__*/_react.default.createElement("p", null, "I am a new paragraph");
+function MainContent() {
+  return /*#__PURE__*/_react.default.createElement("header", null, /*#__PURE__*/_react.default.createElement("h2", null, "\u270B\u270BHey\u270B\u270B I am the main content"));
 }
 
-;
-var _default = NewComponent;
+var _default = MainContent;
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"StyleComponents.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.listColor = exports.bold = exports.h1Style = exports.divStyle = void 0;
-var divStyle = {
-  color: "blue",
-  backgroundColor: '#cccccc',
-  padding: "2rem"
-};
-exports.divStyle = divStyle;
-var h1Style = {
-  fontWeight: "bold",
-  color: "#111111",
-  padding: '1rem'
-};
-exports.h1Style = h1Style;
-var bold = {
-  color: "red"
-};
-exports.bold = bold;
-var listColor = {
-  color: '#ff00ff'
-};
-exports.listColor = listColor;
-},{}],"OlComponent.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.OlComponent = OlComponent;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _StyleComponents = require("./StyleComponents");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function OlComponent() {
-  return /*#__PURE__*/_react.default.createElement("ol", {
-    style: _StyleComponents.listColor
-  }, /*#__PURE__*/_react.default.createElement("li", null, "Brasil"), /*#__PURE__*/_react.default.createElement("li", null, "Paris"), /*#__PURE__*/_react.default.createElement("li", null, "Los Angeles"));
-}
-},{"react":"node_modules/react/index.js","./StyleComponents":"StyleComponents.js"}],"MyInfo.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js"}],"components/sub-component/NavBar.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28360,37 +28313,59 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _NewComponent = _interopRequireDefault(require("./NewComponent"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _OlComponent = require("./OlComponent");
+function NavBar() {
+  return /*#__PURE__*/_react.default.createElement("nav", null, /*#__PURE__*/_react.default.createElement("p", null, "I am the nav ", /*#__PURE__*/_react.default.createElement("b", null, "Bar")), /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
+    herf: "#"
+  }, "Hello")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
+    herf: "#"
+  }, "Hello")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
+    herf: "#"
+  }, "Hello")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
+    herf: "#"
+  }, "Hello"))));
+}
 
-var _StyleComponents = require("./StyleComponents");
+var _default = NavBar;
+exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"components/sub-component/Footer.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function MyInfo() {
-  return /*#__PURE__*/_react.default.createElement("article", {
-    style: _StyleComponents.divStyle
-  }, /*#__PURE__*/_react.default.createElement("h1", {
-    style: _StyleComponents.h1Style
-  }, " Honey\u270B\u270B"), /*#__PURE__*/_react.default.createElement("p", null, "I am a honey called ", /*#__PURE__*/_react.default.createElement("b", {
-    style: _StyleComponents.bold
-  }, "NON-JAR")), /*#__PURE__*/_react.default.createElement(_OlComponent.OlComponent, null), /*#__PURE__*/_react.default.createElement(_NewComponent.default, null));
+function Footer() {
+  return /*#__PURE__*/_react.default.createElement("footer", null, /*#__PURE__*/_react.default.createElement("p", null, "This is the footer"), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("label", null, "Mail"), /*#__PURE__*/_react.default.createElement("input", {
+    type: "mail",
+    id: "mail"
+  })));
 }
 
-var _default = MyInfo;
+var _default = Footer;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./NewComponent":"NewComponent.js","./OlComponent":"OlComponent.js","./StyleComponents":"StyleComponents.js"}],"script.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js"}],"script.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
-var _MyInfo = _interopRequireDefault(require("./MyInfo.js"));
+var _MainContent = _interopRequireDefault(require("./components/sub-component/MainContent.js"));
+
+var _NavBar = _interopRequireDefault(require("./components/sub-component/NavBar.js"));
+
+var _Footer = _interopRequireDefault(require("./components/sub-component/Footer.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// import MyInfo from "./MyInfo.js";
 //Objective: Fill in the boilerplate React code required to render an
 // unordered list (<ul>) to the page. The list should contain 3 list items
 // (<li>) with anything in them you want.
@@ -28428,8 +28403,34 @@ UpperCase cameleCase : MyApp
 // 3. Render an instance of that functional component to the browser
 // Extra challenge: learn on your own (Google!) how you can add some style to your page.
 // (We will also cover this in an upcoming lesson).
-_reactDom.default.render( /*#__PURE__*/_react.default.createElement(_MyInfo.default, null), document.getElementById('root'));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./MyInfo.js":"MyInfo.js"}],"../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+// ReactDOM.render(<MyInfo/>, document.getElementById('root'));
+// import Footer from "./components/Footer.js";
+// import Header from "./components/Header.js";
+// import MainContent from "./components/MainContent.js";
+// function App () {
+//   return (
+//     <article>
+//       < Header/>
+//       <MainContent/>
+//       <Footer/>
+//     </article>
+//   )
+// }
+//this is the entry point of our app
+// Set up the React app from scratch
+// Render an App component (defined in a separate file)
+// Inside App, render:
+// 1. A Navbar component
+// 2. A MainContent component
+// 3. A Footer component
+function MyApp() {
+  return /*#__PURE__*/_react.default.createElement("article", null, /*#__PURE__*/_react.default.createElement(_NavBar.default, null), /*#__PURE__*/_react.default.createElement(_MainContent.default, null), /*#__PURE__*/_react.default.createElement(_Footer.default, null));
+}
+
+;
+
+_reactDom.default.render( /*#__PURE__*/_react.default.createElement(MyApp, null), document.getElementById("root"));
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./components/sub-component/MainContent.js":"components/sub-component/MainContent.js","./components/sub-component/NavBar.js":"components/sub-component/NavBar.js","./components/sub-component/Footer.js":"components/sub-component/Footer.js"}],"../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -28457,7 +28458,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61771" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54317" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
