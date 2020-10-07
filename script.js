@@ -1,5 +1,5 @@
-import React from "react";
-import ReactDOM from "react-dom";
+// import React from "react";
+// import ReactDOM from "react-dom";
 // import MyInfo from "./MyInfo.js";
 //Objective: Fill in the boilerplate React code required to render an
 // unordered list (<ul>) to the page. The list should contain 3 list items
@@ -72,18 +72,101 @@ UpperCase cameleCase : MyApp
   // 2. A MainContent component
   // 3. A Footer component
 
-import MainContent from "./components/sub-component/MainContent.js";
-import NavBar from "./components/sub-component/NavBar.js";
-import Footer from "./components/sub-component/Footer.js";
+// import MainContent from "./components/sub-component/MainContent.js";
+// import NavBar from "./components/sub-component/NavBar.js";
+// import Footer from "./components/sub-component/Footer.js";
 
-function MyApp () {
-  return (
-    <article>
-      <NavBar />
-      <MainContent />
-      <Footer />
-    </article>
-  )
-};
+// function MyApp () {
+//   return (
+//     <article>
+//       <NavBar />
+//       <MainContent />
+//       <Footer />
+//     </article>
+//   )
+// };
 
-ReactDOM.render(<MyApp />, document.getElementById("root"));
+// ReactDOM.render(<MyApp />, document.getElementById("root"));
+/*
+Challenge:
+1. Convert all 3 components to be class-based
+2. Fix the small bug
+*/
+import React from "react"
+import ReactDOM from "react-dom"
+import App from "./App"
+// #1
+// function App() {
+//     return (
+//         <div>
+//             <Header />
+//             <Greeting />
+//         </div>
+//     )
+// }
+
+// class App extends React.Component {
+//   render () {
+//     return (
+//       <div>
+//         <Header username="Honey"/>
+//         <Greeting />
+//       </div>
+//     )
+//   }
+// }
+
+// #2
+// function Header(props) {
+//     return (
+//         <header>
+//             <p>Welcome, {props.username}!</p>
+//         </header>
+//     )
+// }
+
+// class Header extends React.Component {
+//   render (props) {
+//     return (
+//       <header>
+//         <p>Welcome, {this.props.username}!</p>
+//       </header>
+//     )
+//   }
+// }
+// #3
+// function Greeting() {
+//     const date = new Date()
+//     const hours = date.getHours()
+//     let timeOfDay
+//     if (hours < 12) {
+//         timeOfDay = "morning"
+//     } else if (hours >= 12 && hours < 17) {
+//         timeOfDay = "afternoon"
+//     } else {
+//         timeOfDay = "night"
+//     }
+//     return (
+//         <h1>Good {timeOfDay} to you, sir or madam!</h1>
+//     )
+// }
+
+// class Greeting extends React.Component {
+//   render () {
+//     const date = new Date()
+//     const hours = date.getHours()
+//     let timeOfDay
+//     if (hours < 12) {
+//         timeOfDay = "morning"
+//     } else if (hours >= 12 && hours < 17) {
+//         timeOfDay = "afternoon"
+//     } else {
+//         timeOfDay = "night"
+//     }
+//     return (
+//       <h1>Good {timeOfDay} to you, sir or madam!</h1>
+//     )
+//   }
+// }
+
+ReactDOM.render(<App />, document.getElementById("root"));
