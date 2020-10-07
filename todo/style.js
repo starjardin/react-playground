@@ -6,8 +6,14 @@
 } */
 
 export const li = {
-  display : "flex",
+  display : "inline-flex",
   flexDirection : "row",
   alignItems : "center",
-  justifyContent : "space-between"
+  borderBottom : "1px solid grey"
 }
+
+export const pStyles = {
+  paddingInline: "2rem"
+}
+
+
