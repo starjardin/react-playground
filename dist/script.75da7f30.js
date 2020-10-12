@@ -28285,7 +28285,7 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"App.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"App_exercise.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28299,34 +28299,122 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-class App extends _react.Component {
+class App_exercise extends _react.Component {
+  /**
+   * Challenge: Wire up the partially-finished travel form so that it works!
+   * Remember to use the concept of controlled forms
+   * https://reactjs.org/docs/forms.html
+   *
+   * All information should be populating the text below the form in real-time
+   * as you're filling it out
+   *
+   * This exercise is adapted from the V School curriculum on vanilla JS forms:
+   * https://coursework.vschool.io/travel-form/
+   *
+   * All of our challenges and learning resources are open for the public
+   * to play around with and learn from at https://coursework.vschool.io
+   */
   constructor() {
     super();
     this.state = {
-      laoding: false,
-      character: {}
+      firstName: "",
+      lastName: "",
+      age: "",
+      gender: "",
+      location: "",
+      vegeterian: false,
+      spicy: true,
+      freeporc: false
     };
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  async componentDidMount() {
-    this.setState({
-      laoding: true
-    });
-    const response = await fetch("https://swapi.dev/api/planets/3/");
-    const data = await response.json();
-    this.setState({
-      character: data,
-      laoding: false
+  handleChange(e) {
+    const {
+      name,
+      type,
+      value,
+      checked
+    } = e.target;
+    type === "checkbox" ? this.setState({
+      [name]: checked
+    }) : this.setState({
+      [name]: value
     });
   }
 
   render() {
-    return /*#__PURE__*/_react.default.createElement("div", null, this.state.laoding && "laoding....", this.state.character.name);
+    return /*#__PURE__*/_react.default.createElement("main", null, /*#__PURE__*/_react.default.createElement("form", null, /*#__PURE__*/_react.default.createElement("input", {
+      placeholder: "First Name",
+      type: "text",
+      name: "firstName",
+      value: this.state.firstName,
+      onChange: this.handleChange,
+      autoComplete: "off"
+    }), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("input", {
+      placeholder: "Last Name",
+      type: "text",
+      name: "lastName",
+      value: this.state.lastName,
+      onChange: this.handleChange,
+      autoComplete: "off"
+    }), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("input", {
+      placeholder: "Age",
+      type: "text",
+      name: "age",
+      value: this.state.age,
+      onChange: this.handleChange,
+      autoComplete: "off"
+    }), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("label", null, /*#__PURE__*/_react.default.createElement("input", {
+      type: "radio",
+      value: "male",
+      checked: this.state.gender === "male",
+      name: "gender",
+      onChange: this.handleChange
+    }), "Male"), /*#__PURE__*/_react.default.createElement("label", null, /*#__PURE__*/_react.default.createElement("input", {
+      type: "radio",
+      value: "female",
+      checked: this.state.gender === "female",
+      name: "gender",
+      onChange: this.handleChange
+    }), "Female"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("select", {
+      value: this.state.value,
+      name: "location",
+      onChange: this.handleChange
+    }, /*#__PURE__*/_react.default.createElement("option", {
+      value: "tana"
+    }, "Tana"), /*#__PURE__*/_react.default.createElement("option", {
+      value: "afgan"
+    }, "Afgan"), /*#__PURE__*/_react.default.createElement("option", {
+      value: "brazil"
+    }, "Brazil"), /*#__PURE__*/_react.default.createElement("option", {
+      value: "hong kong"
+    }, "Hong Kong"), /*#__PURE__*/_react.default.createElement("option", {
+      value: "china"
+    }, "China"), /*#__PURE__*/_react.default.createElement("option", {
+      value: "france"
+    }, "France"), /*#__PURE__*/_react.default.createElement("option", {
+      value: "europe"
+    }, "Europe"), /*#__PURE__*/_react.default.createElement("option", {
+      value: "india"
+    }, "India")), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("label", null, /*#__PURE__*/_react.default.createElement("input", {
+      type: "checkbox",
+      name: "vegetarian",
+      value: this.state.vegeterian
+    }), "Vegetarian"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("label", null, /*#__PURE__*/_react.default.createElement("input", {
+      type: "checkbox",
+      name: "spicy",
+      value: this.state.spicy
+    }), "Spicy"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("label", null, /*#__PURE__*/_react.default.createElement("input", {
+      type: "checkbox",
+      name: "porkFree",
+      value: this.state.porkFree
+    }), "PorkFree"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("button", null, "Submit")), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("h2", null, "Entered information:"), /*#__PURE__*/_react.default.createElement("p", null, "Your name: ", this.state.firstName, " ", this.state.lastName), /*#__PURE__*/_react.default.createElement("p", null, "Your age: ", this.state.age), /*#__PURE__*/_react.default.createElement("p", null, "Your gender: ", this.state.gender), /*#__PURE__*/_react.default.createElement("p", null, "Your destination: ", this.state.location), /*#__PURE__*/_react.default.createElement("p", null, "Your dietary restrictions:", this.state.vegeterian && "vegeterian", this.state.spicy && "spicy", this.state.freeporc && "freeporc"));
   }
 
 }
 
-exports.default = App;
+exports.default = App_exercise;
 },{"react":"../node_modules/react/index.js"}],"script.js":[function(require,module,exports) {
 "use strict";
 
@@ -28334,12 +28422,12 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
-var _App = _interopRequireDefault(require("./App.js"));
+var _App_exercise = _interopRequireDefault(require("./App_exercise.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom.default.render( /*#__PURE__*/_react.default.createElement(_App.default, null), document.getElementById("root"));
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./App.js":"App.js"}],"../../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+_reactDom.default.render( /*#__PURE__*/_react.default.createElement(_App_exercise.default, null), document.getElementById("root"));
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./App_exercise.js":"App_exercise.js"}],"../../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -28367,7 +28455,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49691" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51620" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
