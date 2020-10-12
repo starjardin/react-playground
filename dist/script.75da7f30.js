@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"node_modules/object-assign/index.js":[function(require,module,exports) {
+})({"../node_modules/object-assign/index.js":[function(require,module,exports) {
 /*
 object-assign
 (c) Sindre Sorhus
@@ -213,7 +213,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
   return to;
 };
-},{}],"node_modules/prop-types/lib/ReactPropTypesSecret.js":[function(require,module,exports) {
+},{}],"../node_modules/prop-types/lib/ReactPropTypesSecret.js":[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -227,7 +227,7 @@ var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 
 module.exports = ReactPropTypesSecret;
 
-},{}],"node_modules/prop-types/checkPropTypes.js":[function(require,module,exports) {
+},{}],"../node_modules/prop-types/checkPropTypes.js":[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -323,7 +323,7 @@ checkPropTypes.resetWarningCache = function () {
 };
 
 module.exports = checkPropTypes;
-},{"./lib/ReactPropTypesSecret":"node_modules/prop-types/lib/ReactPropTypesSecret.js"}],"node_modules/react/cjs/react.development.js":[function(require,module,exports) {
+},{"./lib/ReactPropTypesSecret":"../node_modules/prop-types/lib/ReactPropTypesSecret.js"}],"../node_modules/react/cjs/react.development.js":[function(require,module,exports) {
 /** @license React v16.13.1
  * react.development.js
  *
@@ -2200,7 +2200,7 @@ if ("development" !== "production") {
     exports.version = ReactVersion;
   })();
 }
-},{"object-assign":"node_modules/object-assign/index.js","prop-types/checkPropTypes":"node_modules/prop-types/checkPropTypes.js"}],"node_modules/react/index.js":[function(require,module,exports) {
+},{"object-assign":"../node_modules/object-assign/index.js","prop-types/checkPropTypes":"../node_modules/prop-types/checkPropTypes.js"}],"../node_modules/react/index.js":[function(require,module,exports) {
 'use strict';
 
 if ("development" === 'production') {
@@ -2208,7 +2208,7 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react.development.js');
 }
-},{"./cjs/react.development.js":"node_modules/react/cjs/react.development.js"}],"node_modules/scheduler/cjs/scheduler.development.js":[function(require,module,exports) {
+},{"./cjs/react.development.js":"../node_modules/react/cjs/react.development.js"}],"../node_modules/scheduler/cjs/scheduler.development.js":[function(require,module,exports) {
 /** @license React v0.19.1
  * scheduler.development.js
  *
@@ -3063,7 +3063,7 @@ if ("development" !== "production") {
     exports.unstable_wrapCallback = unstable_wrapCallback;
   })();
 }
-},{}],"node_modules/scheduler/index.js":[function(require,module,exports) {
+},{}],"../node_modules/scheduler/index.js":[function(require,module,exports) {
 'use strict';
 
 if ("development" === 'production') {
@@ -3071,7 +3071,7 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/scheduler.development.js');
 }
-},{"./cjs/scheduler.development.js":"node_modules/scheduler/cjs/scheduler.development.js"}],"node_modules/scheduler/cjs/scheduler-tracing.development.js":[function(require,module,exports) {
+},{"./cjs/scheduler.development.js":"../node_modules/scheduler/cjs/scheduler.development.js"}],"../node_modules/scheduler/cjs/scheduler-tracing.development.js":[function(require,module,exports) {
 /** @license React v0.19.1
  * scheduler-tracing.development.js
  *
@@ -3419,7 +3419,7 @@ if ("development" !== "production") {
     exports.unstable_wrap = unstable_wrap;
   })();
 }
-},{}],"node_modules/scheduler/tracing.js":[function(require,module,exports) {
+},{}],"../node_modules/scheduler/tracing.js":[function(require,module,exports) {
 'use strict';
 
 if ("development" === 'production') {
@@ -3427,7 +3427,7 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/scheduler-tracing.development.js');
 }
-},{"./cjs/scheduler-tracing.development.js":"node_modules/scheduler/cjs/scheduler-tracing.development.js"}],"node_modules/react-dom/cjs/react-dom.development.js":[function(require,module,exports) {
+},{"./cjs/scheduler-tracing.development.js":"../node_modules/scheduler/cjs/scheduler-tracing.development.js"}],"../node_modules/react-dom/cjs/react-dom.development.js":[function(require,module,exports) {
 /** @license React v16.13.1
  * react-dom.development.js
  *
@@ -28247,7 +28247,7 @@ if ("development" !== "production") {
     exports.version = ReactVersion;
   })();
 }
-},{"react":"node_modules/react/index.js","object-assign":"node_modules/object-assign/index.js","scheduler":"node_modules/scheduler/index.js","prop-types/checkPropTypes":"node_modules/prop-types/checkPropTypes.js","scheduler/tracing":"node_modules/scheduler/tracing.js"}],"node_modules/react-dom/index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","object-assign":"../node_modules/object-assign/index.js","scheduler":"../node_modules/scheduler/index.js","prop-types/checkPropTypes":"../node_modules/prop-types/checkPropTypes.js","scheduler/tracing":"../node_modules/scheduler/tracing.js"}],"../node_modules/react-dom/index.js":[function(require,module,exports) {
 'use strict';
 
 function checkDCE() {
@@ -28285,7 +28285,7 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"components/sub-component/MainContent.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28293,144 +28293,53 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
-function MainContent() {
-  return /*#__PURE__*/_react.default.createElement("header", null, /*#__PURE__*/_react.default.createElement("h2", null, "\u270B\u270BHey\u270B\u270B I am the main content"));
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+class App extends _react.Component {
+  constructor() {
+    super();
+    this.state = {
+      laoding: false,
+      character: {}
+    };
+  }
+
+  async componentDidMount() {
+    this.setState({
+      laoding: true
+    });
+    const response = await fetch("https://swapi.dev/api/planets/3/");
+    const data = await response.json();
+    this.setState({
+      character: data,
+      laoding: false
+    });
+  }
+
+  render() {
+    return /*#__PURE__*/_react.default.createElement("div", null, this.state.laoding && "laoding....", this.state.character.name);
+  }
+
 }
 
-var _default = MainContent;
-exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"components/sub-component/NavBar.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function NavBar() {
-  return /*#__PURE__*/_react.default.createElement("nav", null, /*#__PURE__*/_react.default.createElement("p", null, "I am the nav ", /*#__PURE__*/_react.default.createElement("b", null, "Bar")), /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
-    herf: "#"
-  }, "Hello")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
-    herf: "#"
-  }, "Hello")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
-    herf: "#"
-  }, "Hello")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
-    herf: "#"
-  }, "Hello"))));
-}
-
-var _default = NavBar;
-exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"components/sub-component/Footer.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function Footer() {
-  return /*#__PURE__*/_react.default.createElement("footer", null, /*#__PURE__*/_react.default.createElement("p", null, "This is the footer"), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("label", null, "Mail"), /*#__PURE__*/_react.default.createElement("input", {
-    type: "mail",
-    id: "mail"
-  })));
-}
-
-var _default = Footer;
-exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"script.js":[function(require,module,exports) {
+exports.default = App;
+},{"react":"../node_modules/react/index.js"}],"script.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
-var _MainContent = _interopRequireDefault(require("./components/sub-component/MainContent.js"));
-
-var _NavBar = _interopRequireDefault(require("./components/sub-component/NavBar.js"));
-
-var _Footer = _interopRequireDefault(require("./components/sub-component/Footer.js"));
+var _App = _interopRequireDefault(require("./App.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import MyInfo from "./MyInfo.js";
-//Objective: Fill in the boilerplate React code required to render an
-// unordered list (<ul>) to the page. The list should contain 3 list items
-// (<li>) with anything in them you want.
-// HINTS:
-// import the libraries you need first
-// use one of the libraries to render some JSX to the page
-//   ReactDOM.render(
-//     <ul>
-//       <li>I am the first li</li>
-//       <li>I am the second li</li>
-//       <li>I am the third li</li>
-//     </ul>, document.getElementById('root'));
-// function App () {
-// return  (
-//   <ul>
-//     <li>I am the first li</li>
-//     <li>I am the second li</li>
-//     <li>I am the third li</li>
-//   </ul>
-//  )
-// }
-// ReactDOM.render(<App/>, document.getElementById("root"));
-//************************************************/
-//Functional components;
-
-/*
-UpperCase cameleCase : MyApp
-*/
-// Objectives:
-// 1. Set up the basic React code from scratch
-// 2. Create a functional component called MyInfo that returns the following UI:
-// a. An h1 with your name
-// b. A paragraph with a little blurb about yourself
-// c. An ordered or unordered list of the top 3 vacation spots you'd like to visit
-// 3. Render an instance of that functional component to the browser
-// Extra challenge: learn on your own (Google!) how you can add some style to your page.
-// (We will also cover this in an upcoming lesson).
-// ReactDOM.render(<MyInfo/>, document.getElementById('root'));
-// import Footer from "./components/Footer.js";
-// import Header from "./components/Header.js";
-// import MainContent from "./components/MainContent.js";
-// function App () {
-//   return (
-//     <article>
-//       < Header/>
-//       <MainContent/>
-//       <Footer/>
-//     </article>
-//   )
-// }
-//this is the entry point of our app
-// Set up the React app from scratch
-// Render an App component (defined in a separate file)
-// Inside App, render:
-// 1. A Navbar component
-// 2. A MainContent component
-// 3. A Footer component
-function MyApp() {
-  return /*#__PURE__*/_react.default.createElement("article", null, /*#__PURE__*/_react.default.createElement(_NavBar.default, null), /*#__PURE__*/_react.default.createElement(_MainContent.default, null), /*#__PURE__*/_react.default.createElement(_Footer.default, null));
-}
-
-;
-
-_reactDom.default.render( /*#__PURE__*/_react.default.createElement(MyApp, null), document.getElementById("root"));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./components/sub-component/MainContent.js":"components/sub-component/MainContent.js","./components/sub-component/NavBar.js":"components/sub-component/NavBar.js","./components/sub-component/Footer.js":"components/sub-component/Footer.js"}],"../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+_reactDom.default.render( /*#__PURE__*/_react.default.createElement(_App.default, null), document.getElementById("root"));
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./App.js":"App.js"}],"../../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -28458,7 +28367,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54317" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49691" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -28634,5 +28543,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js","script.js"], null)
+},{}]},{},["../../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js","script.js"], null)
 //# sourceMappingURL=/script.75da7f30.js.map

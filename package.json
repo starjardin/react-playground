@@ -17,7 +17,11 @@
   },
   "homepage": "https://github.com/starjardin/react-playground#readme",
   "dependencies": {
+    "jokes": "0.0.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
-  }
+  },
+  "browserslist": [
+    "last 1 chrome versions"
+  ]
 }
