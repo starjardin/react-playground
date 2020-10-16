@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.scss"],"names":[],"mappings":"AAAA;EACE;EACA;EACA;;;AAGF;EACE;;;AAIF;EACE;EACA","file":"style.97fcb138.css","sourceRoot":"..","sourcesContent":["input {\r\n  display: block;\r\n  padding: .5rem;\r\n  margin-block: 1rem;\r\n}\r\n\r\nfieldset {\r\n  border: none;\r\n}\r\n\r\n\r\nbutton {\r\n  padding-block: .5rem;\r\n  padding-inline : .5rem;\r\n}"]}

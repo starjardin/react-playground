@@ -1,0 +1,16 @@
+input {
+  display: block;
+  padding: 0.5rem;
+  margin-block: 1rem;
+}
+
+fieldset {
+  border: none;
+}
+
+button {
+  padding-block: 0.5rem;
+  padding-inline: 0.5rem;
+}
+
+/*# sourceMappingURL=/style.97fcb138.css.map */
