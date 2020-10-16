@@ -1,0 +1,23 @@
+body {
+  padding : 1rem;
+  background-color: #cccccc;
+}
+
+.container {
+  background-color: #ffffff;
+  margin-block: 2rem;
+  padding: 1.5rem;
+  border-radius: 5px;
+  position: relative;
+  padding-right: 20%;
+}
+
+.producer {
+  padding-inline-end: 20%;
+}
+
+.score {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+}
