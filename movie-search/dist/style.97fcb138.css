@@ -1,0 +1,116 @@
+body {
+  font-size: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+small {
+  font-size: 1.2rem;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.title {
+  font-size: 4.4rem;
+  text-align: center;
+}
+
+.form {
+  display: grid;
+}
+
+.label {
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+  font-size: 1.2rem;
+}
+
+.input {
+  font-size: 1.6rem;
+  padding: 0.5rem 2rem;
+  line-height: 2.8rem;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 1rem;
+  transition: 0.3s;
+}
+
+.button {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 1rem 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.75);
+  font-size: 1.4rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 250ms;
+}
+
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.input:focus {
+  border: 1px blue solid;
+  outline: none;
+}
+
+.button:focus {
+  border: 1px solid rgba(0, 0, 0, 0.75);
+  font-size: 1.4rem;
+  border-radius: 20px;
+  outline: none;
+}
+
+.card {
+  padding: 2rem 4rem;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+  margin-bottom: 2rem;
+  background-color: #ffffff;
+}
+
+.card-list {
+  margin-top: 4rem;
+}
+
+.card--title {
+  margin-bottom: 0.5rem;
+  font-size: 3.5rem;
+}
+
+.card--image {
+  margin: auto;
+  display: block;
+}
+
+@media (min-width: 786px) {
+  .form {
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 1rem;
+    align-items: center;
+  }
+
+  .input {
+    margin-bottom: 0;
+  }
+}
+
+/*# sourceMappingURL=/style.97fcb138.css.map */
